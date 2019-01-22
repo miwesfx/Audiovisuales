@@ -59,6 +59,8 @@ elseif(isset($id_centro) && isset($videoconferencia)){
 else
 	echo '<h2>Espacios</h2>';
 
+	echo '<h3><a href="./index.php?tab='.$centro->mostrar_id_campus().'">Atrás</a></h3>';
+
 //Carga los diferentes posibles valores del campo enum|set
 $resultado = mysqli_query($connect,"SELECT COLUMN_TYPE	AS texto FROM information_schema.COLUMNS WHERE TABLE_NAME='espacios' AND COLUMN_NAME='tipo'");
 $resultado = $resultado->fetch_assoc();

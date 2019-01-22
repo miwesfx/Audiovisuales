@@ -43,6 +43,10 @@ include_once './clases.php';
 include_once './conexion.php';
 
 
+$tab					= filter_input(INPUT_GET, 'tab',				FILTER_SANITIZE_STRING);
+if(empty($tab))
+	$tab = 1;
+
 if(userIsAuth()){
 $connect = conectarBD();
 $acentos = $connect->query("SET NAMES 'utf8'");
@@ -127,7 +131,7 @@ if ($ldapconn) {
   <ul class="nav nav-tabs">
 	<?PHP
 	foreach($campuses as $campus){
-		echo '<li';	if($campus->mostrar_id_campus()==1)echo ' class="active"';	echo '><a data-toggle="tab" href="#'.$campus->mostrar_id_campus().'">'.$campus->mostrar_nombre_campus().'</a></li>';
+		echo '<li';	if($campus->mostrar_id_campus()==$tab)echo ' class="active"';	echo '><a data-toggle="tab" href="#'.$campus->mostrar_id_campus().'">'.$campus->mostrar_nombre_campus().'</a></li>';
 	}
 	?>
   </ul>

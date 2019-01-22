@@ -11,6 +11,10 @@
 		font-size: 1.5 rem;
 	}
 
+h3 a:hover{
+	color: black !important;
+}
+
 html, body {
   height: 100%;
 }
