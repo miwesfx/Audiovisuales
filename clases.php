@@ -216,7 +216,7 @@ class Dispositivo {
 	function mostrar_tipo()			{		return $this->tipo;				}
 	function mostrar_fecha_instalacion(){	return $this->fecha_instalacion;}
 	function mostrar_fecha_entrega(){		return $this->fecha_entrega;	}
-	/*function mostrar_foto()			{		return $this->foto;				}
+	/*function mostrar_foto()		{		return $this->foto;				}
 	function mostrar_historico()	{		return $this->historico;		}*/
 }
 
