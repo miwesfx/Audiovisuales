@@ -147,7 +147,7 @@ class Espacio extends Centro{
 											mysqli_query($connect, "UPDATE espacios SET planta = '$planta' WHERE id_espacio=".$this->id_espacio."");
 											mysqli_close($connect);
 										}
-	function modificar_tipo($tipo)	{	$connect = conectarBD();
+	function modificar_tipo($tipo)		{	$connect = conectarBD();
 											$acentos = $connect->query("SET NAMES 'utf8'");
 											mysqli_query($connect, "UPDATE espacios SET tipo = '$tipo' WHERE id_espacio=".$this->id_espacio."");
 											mysqli_close($connect);
